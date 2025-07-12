@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - E-Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">UV LearnHub</a>
+            <ul class="nav-links">
+                <li><a href="#" data-page="dashboard" class="active">Dashboard</a></li>
+                <li><a href="#" data-page="courses">Courses</a></li>
+                <li><a href="#" data-page="video">Learn</a></li>
+                <li><a href="#" data-page="progress">Progress</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="user-profile">
+                <div class="avatar">UV</div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container"> 
+        <div id="dashboard" class="page active">
+            <div class="dashboard-grid">
+                <div class="welcome-section">
+                    <h1 class="welcome-title">Welcome back, Yuvi!</h1>
+                    <p>Continue your learning journey. You're doing great!</p> 
+                    <div class="course-grid">
+                        <div class="course-card" onclick="showPage('video')">
+                            <div class="course-thumbnail">JS</div>
+                            <div class="course-content">
+                                <h3 class="course-title">JavaScript Fundamentals</h3>
+                                <p class="course-instructor">Dr. Sarah Johnson</p>
+                                <div class="course-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                    <small>75% Complete</small>
+                                </div>
+                                <div class="course-meta">
+                                    <span class="course-rating">⭐ 4.8</span>
+                                    <span class="course-duration">8 hours</span>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="course-card" onclick="showPage('video')">
+                            <div class="course-thumbnail">RE</div>
+                            <div class="course-content">
+                                <h3 class="course-title">React Development</h3>
+                                <p class="course-instructor">Mike Chen</p>
+                                <div class="course-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 45%"></div>
+                                    </div>
+                                    <small>45% Complete</small>
+                                </div>
+                                <div class="course-meta">
+                                    <span class="course-rating">⭐ 4.9</span>
+                                    <span class="course-duration">12 hours</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="stats-card">
+                    <h3>Your Stats</h3>
+                    <div class="stat-item">
+                        <span>Courses Enrolled</span>
+                        <span class="stat-value">6</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Hours Learned</span>
+                        <span class="stat-value">47</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Certificates</span>
+                        <span class="stat-value">3</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Current Streak</span>
+                        <span class="stat-value">12 days</span>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="courses" class="page">
+            <h2 style="color: white; margin-bottom: 2rem; font-size: 2.5rem; text-align: center;">Explore Courses</h2>
+            <div class="course-grid">
+                <div class="course-card" onclick="showPage('video')">
+                    <div class="course-thumbnail">JS</div>
+                    <div class="course-content">
+                        <h3 class="course-title">JavaScript Fundamentals</h3>
+                        <p class="course-instructor">Dr. Sarah Johnson</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <small>75% Complete</small>
+                        </div>
+                        <div class="course-meta">
+                            <span class="course-rating">⭐ 4.8</span>
+                            <span class="course-duration">8 hours</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" onclick="showPage('video')">
+                    <div class="course-thumbnail">RE</div>
+                    <div class="course-content">
+                        <h3 class="course-title">React Development</h3>
+                        <p class="course-instructor">Mike Chen</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                            <small>45% Complete</small>
+                        </div>
+                        <div class="course-meta">
+                            <span class="course-rating">⭐ 4.9</span>
+                            <span class="course-duration">12 hours</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" onclick="showPage('video')">
+                    <div class="course-thumbnail">PY</div>
+                    <div class="course-content">
+                        <h3 class="course-title">Python for Beginners</h3>
+                        <p class="course-instructor">Dr. Alex Rivera</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 20%"></div>
+                            </div>
+                            <small>20% Complete</small>
+                        </div>
+                        <div class="course-meta">
+                            <span class="course-rating">⭐ 4.7</span>
+                            <span class="course-duration">10 hours</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" onclick="showPage('video')">
+                    <div class="course-thumbnail">UI</div>
+                    <div class="course-content">
+                        <h3 class="course-title">UI/UX Design</h3>
+                        <p class="course-instructor">Emma Wilson</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <small>Not Started</small>
+                        </div>
+                        <div class="course-meta">
+                            <span class="course-rating">⭐ 4.9</span>
+                            <span class="course-duration">15 hours</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card" onclick="showPage('video')">
+                    <div class="course-thumbnail">DB</div>
+                    <div class="course-content">
+                        <h3 class="course-title">Database Design</h3>
+                        <p class="course-instructor">Prof. James Kim</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <small>Not Started</small>
+                        </div>
+                        <div class="course-meta">
+                            <span class="course-rating">⭐ 4.6</span>
+                            <span class="course-duration">9 hours</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card" onclick="showPage('video')">
+                    <div class="course-thumbnail">ML</div>
+                    <div class="course-content">
+                        <h3 class="course-title">Machine Learning</h3>
+                        <p class="course-instructor">Dr. Lisa Zhang</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <small>Not Started</small>
+                        </div>
+                        <div class="course-meta">
+                            <span class="course-rating">⭐ 4.8</span>
+                            <span class="course-duration">20 hours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="video" class="page">
+            <div class="video-player">
+                <h2 style="margin-bottom: 1rem;">JavaScript Fundamentals - Variables and Data Types</h2>
+                <div class="video-container">
+                    <div class="video-placeholder" >
+                        🎥 Video Player - "Introduction to JavaScript Variables"
+                        <br><br>
+                        <small >Click play to start learning</small>
+                    </div>
+                </div>
+                <div class="video-controls">
+                    <button class="play-btn" onclick="toggleVideo()">▶ Play</button>
+                    <span>Duration: 12:35</span>
+                </div>
+            </div> 
+            <div class="lesson-list">
+                <h3 style="margin-bottom: 1rem;">Course Lessons</h3>
+                <div class="lesson-item active">
+                    <div>
+                        <div class="lesson-title">1. Introduction to JavaScript</div>
+                         
+                        <small>What is JavaScript and why use it?</small>
+                    </div>
+                    <span class="lesson-duration">12:35</span>
+                </div>
+                <div class="lesson-item">
+                    <div>
+                        <div class="lesson-title">2. Variables and Data Types</div>
+                        <small>Understanding let, const, and var</small>
+                        
+                    </div>
+                    <span class="lesson-duration">15:20</span>
+                </div>
+                <div class="lesson-item">
+                    <div>
+                        <div class="lesson-title">3. Functions and Scope</div>
+                        <small>Writing and calling functions</small>
+                    </div>
+                    <span class="lesson-duration">18:45</span>
+                </div>
+                <div class="lesson-item">
+                    <div>
+                        <div class="lesson-title">4. Arrays and Objects</div>
+                        <small>Working with complex data structures</small>
+                    </div>
+                    <span class="lesson-duration">22:10</span>
+                </div>
+                <div class="lesson-item">
+                    <div>
+                        <div class="lesson-title">5. Control Flow</div>
+                        <small>If statements, loops, and conditionals</small>
+                    </div>
+                    <span class="lesson-duration">16:30</span>
+                </div>
+            </div>
+        </div> 
+        <div id="progress" class="page">
+            <div class="progress-overview">
+                <h2 style="margin-bottom: 2rem;">Your Learning Progress</h2>
+                
+                <div class="progress-chart">
+                    📊 Progress Chart
+                    <br><br>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">📈</div>
+                        <div>Weekly learning hours: 8.5</div>
+                        <div>Monthly completion rate: 85%</div>
+                        <div>Total progress: 67% across all courses</div>
+                    </div>
+                </div> 
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div>
+                        <h4>JavaScript Fundamentals</h4>
+                        <div class="progress-bar" style="margin: 0.5rem 0;">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <small>Lesson 6 of 8 - 75% Complete</small>
+                    </div> 
+                    <div>
+                        <h4>React Development</h4>
+                        <div class="progress-bar" style="margin: 0.5rem 0;">
+                            <div class="progress-fill" style="width: 45%"></div>
+                        </div>
+                        <small>Lesson 5 of 11 - 45% Complete</small>
+                    </div> 
+                    <div>
+                        <h4>Python for Beginners</h4>
+                        <div class="progress-bar" style="margin: 0.5rem 0;">
+                            <div class="progress-fill" style="width: 20%"></div>
+                        </div>
+                        <small>Lesson 2 of 10 - 20% Complete</small>
+                    </div>
+                </div>
+            </div> 
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <div class="achievement-title">First Course Completed</div>
+                    <div class="achievement-desc">Completed HTML & CSS Basics</div>
+                </div> 
+                <div class="achievement-card">
+                    <div class="achievement-icon">🔥</div>
+                    <div class="achievement-title">12 Day Streak</div>
+                    <div class="achievement-desc">Learning every day for 12 days</div>
+                </div> 
+                <div class="achievement-card">
+                    <div class="achievement-icon">⭐</div>
+                    <div class="achievement-title">Quick Learner</div>
+                    <div class="achievement-desc">Completed 3 lessons in one day</div>
+                </div> 
+                <div class="achievement-card">
+                    <div class="achievement-icon">📚</div>
+                    <div class="achievement-title">Knowledge Seeker</div>
+                    <div class="achievement-desc">Enrolled in 6 courses</div>
+                </div>
+            </div>
+        </div>
+    </main> 
+</body>
+<script src="script.js"></script>
+</html>
